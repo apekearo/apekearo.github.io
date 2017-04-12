@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Portfolio Contact</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<!-- bringing over the id"main-menu" to keep the consistency id across html sites.-->
+<div id="main-menu">
+	<header>
+		<div class="banner">
+			<h1>Anthony Pekearo</h1>
+<!-- Header Link Directory -->
+			<div class="linkDirectory">
+				<a href="index.html">An Introduction to me! | </a>
+				<a href="portfolio.html">A Lab Of My Work! | </a>
+				<a href="contact.html">A Good Way To Get A Hold Of Me! </a>
+			</div>
+		</div>
+	</header>
+</div>
+<body>
+	<div class="content">
+		<section class="container">
+			<h2>Contact Me Form</h2>
+			<form action="/action_page.php">
+		<label for ="name">Name</label>
+		<input type="text" id="name" name="name" placeholder="Johnny Rotten">
+		<label for="email">Email</label>
+		<input type="text" name="email_address" id="email" placeholder="yourTotallyLameEmail@gmail.com">
+		<label for="message">Message</label>
+		<textarea name="message" id="message" placeholder="Shoot Me A Message And I'll Try To Reply Quickly! Thank You!" style="height:200px"></textarea>
+		<input type="submit" value="Submit">
+			</form>
+		</section>
+		<!--after the contact form, there still needs to be the Icon Box properly placed on the screen using css-->
+		<section class="connect">
+		<h3>Connect With Me Easily!</h3>
+		<br>
+		<!-- maybe add an <hr>-->
+		<a href="https://github.com/apekearo" target="_blank"><img src="assets/images/gitpic.png" class="icons" alt="Github_Logo" title="Check Out My Github Repo's!"></a>
+		<a href="https://www.linkedin.com/in/apekearo" target="_blank"><img src="assets/images/linkedinPic.png" class="icons" alt="Linkedin_Logo" title="Connect With Me On Linkedin!"></a>
+		<a href="http://stackoverflow.com/users/7655302/datavader" target="_blank"><img src="assets/images/stackoverflowPic.png" class="icons" alt="Stackoverflow_Logo" title="See All My Stackoverflow Contributions!"></a>
+	</section>
+	</div>
+	</body>
+	<footer>
+	&copy; Created and Copyright by Anthony Pekearo 2017
+</footer>
+</html>

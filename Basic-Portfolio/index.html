@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+	<title>Basic Porfolio</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<div id="main-menu">
+	<header>
+	<!-- a divider to fix the banner object-->
+		<div class="banner">
+			<h1>Anthony Pekearo</h1>
+	<!-- Nesting the linkDirectory inside the Banner div for placemetn control, might make them relatively positioned.  seperating the divs for my banner and links, but might not keep it this way-->
+			<div class="linkDirectory">
+				<a href="index.html">An Introduction to me! | </a>
+				<a href="portfolio.html">A Lab Of My Work! | </a>
+				<a href="contact.html">A Good Way To Get A Hold Of Me! </a>
+			</div>
+		</div>
+	</header>
+</div>
+<body>
+<!--Builing with divs and sections to keep things clear and orderly-->
+	<div class="content">
+		<section class="container">
+			<h2>About Me</h2>
+		<br>
+			<img src="assets/images/profilePic.jpg" id="profilePic" width="200px" height="200px">
+		<p>Some Say I'm too much of a doer for how much of a dreamer I am.  This coding will allow some of my dreams to become reality.</p>
+	</section>
+	<!--close the section "aboutMe"but leave the "content" div open to frame together properly the "connect" section in the css file-->
+	<section class="connect">
+		<h3>Connect With Me Easily!</h3>
+		<br>
+		<!-- maybe add an <hr>-->
+		<a href="https://github.com/apekearo" target="_blank"><img src="assets/images/gitpic.png" class="icons" alt="Github_Logo" title="Check Out My Github Repo's!"></a>
+		<a href="https://www.linkedin.com/in/apekearo" target="_blank"><img src="assets/images/linkedinPic.png" class="icons" alt="Linkedin_Logo" title="Connect With Me On Linkedin!"></a>
+		<a href="http://stackoverflow.com/users/7655302/datavader" target="_blank"><img src="assets/images/stackoverflowPic.png" class="icons" alt="Stackoverflow_Logo" title="See All My Stackoverflow Contributions!"></a>
+	</section>
+	<!-- bring the content class to a close after closing the sections-->
+	</div>
+</body>
+<footer>
+	&copy; Created and Copyright by Anthony Pekearo 2017
+</footer>
+</html>
