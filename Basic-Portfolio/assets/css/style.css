@@ -6,7 +6,7 @@
 
 
 body{
-	background-image: url("../images/pow-star/pow star/pow-star.png");
+	background-image: url("../images/cloth.png");
 	background-color: #d7cfc3;
 	color: #777777;
 	margin: 0px auto;
@@ -38,6 +38,7 @@ header{
 	top: 0px;
 	position: fixed;
 	z-index: 69;
+	opacity: 0.9;
 }
 /*establishes tranparency on scroll 
 body.scrolled #main-menu {
@@ -74,10 +75,10 @@ position based on its ancestor, the banner*/
 .linkDirectory{
 	padding: 30px 0px 0px 20px;
 	height: 55px;
-	right: 0px;
+	right: 40px;
 	display: inline;
 	position: absolute;
-}
+	}
 /*set a size for the content box
 that will take up most of the screen for 
 the container and connect fields*/
@@ -92,7 +93,7 @@ the container and connect fields*/
 	margin: 85px 20px 150px 0px;
 	padding: 30px;
 }
-/* Link attributes including hover
+/* Link attributes including hover */
 a {
 	color: #777777;
 	text-decoration: none;
@@ -101,7 +102,7 @@ a {
 }
 a:hover {
 	color: #4AAAA5;
-}*/
+}
 /* set the paramaters for the H2 text*/
 h2{
 	color: #4aaaa5;
