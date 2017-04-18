@@ -6,14 +6,15 @@
 
 
 body{
-	background-image: url("../images/pow-star/pow star/pow-star.png");
+	background-image: url("../images/cloth.png");
 	background-color: #d7cfc3;
 	color: #777777;
 	margin: 0px auto;
 	font-family: 'Helvetica','Arial', 'sans-serif';
 
 }
-/*set the H1 header details*/
+/*set the H1 header details to the specified
+ background color and padding for text*/
 h1{
 	background-color: #4aaaa5;
 	display: inline-block;
@@ -23,7 +24,7 @@ h1{
 	font-family: 'sans-serif', 'Arial';
 	color: #ffffff;
 }
-/* set section dividers color */
+/* set main background color */
 section{
 	background-color: #ffffff;
 }
@@ -38,27 +39,8 @@ header{
 	top: 0px;
 	position: fixed;
 	z-index: 69;
+	opacity: 0.9;
 }
-/*establishes tranparency on scroll 
-body.scrolled #main-menu {
-
-	opacity: 0.2;
-
-	transition: opacity .2s;
-
-	z-index: 98;
-
-}
-
-body.scrolled #main-menu:hover {
-
-	opacity: 1.0;
-
-	transition: opacity .2s;
-
-	z-index: 97;
-
-} */
 /*position the banner tabbed in from the
 corner a little bit to look good, and
 its position stays relative, no matter 
@@ -74,10 +56,10 @@ position based on its ancestor, the banner*/
 .linkDirectory{
 	padding: 30px 0px 0px 20px;
 	height: 55px;
-	right: 0px;
+	right: 40px;
 	display: inline;
 	position: absolute;
-}
+	}
 /*set a size for the content box
 that will take up most of the screen for 
 the container and connect fields*/
@@ -92,7 +74,7 @@ the container and connect fields*/
 	margin: 85px 20px 150px 0px;
 	padding: 30px;
 }
-/* Link attributes including hover
+/* Link attributes including hover */
 a {
 	color: #777777;
 	text-decoration: none;
@@ -101,7 +83,7 @@ a {
 }
 a:hover {
 	color: #4AAAA5;
-}*/
+}
 /* set the paramaters for the H2 text*/
 h2{
 	color: #4aaaa5;
@@ -133,8 +115,8 @@ p{
 	display: inline;
 	margin-top: 10px;
 	margin-right: 15px;
-	width: 250px;
-}
+	width: 300px;
+	}
 /*set parameters to the Connect box*/
 .connect{
 	width: 240px;
@@ -210,8 +192,4 @@ input[type=submit] {
     padding: 12px 20px;
     border: none;
     cursor: pointer;
-}
-::-webkit-input-placeholder { /* WebKit browsers */
-    color: #666666;
-    opacity: 0.5 !important;
 }
