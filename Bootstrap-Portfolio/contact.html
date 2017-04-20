@@ -2,28 +2,34 @@
 <html lang="en-us">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Basic Portfolio Contact</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <!-- bringing over the id"main-menu" to keep the consistency id across html sites.-->
 <div id="main-menu">
 	<header>
-		<div class="banner">
-			<h1>Anthony Pekearo</h1>
+				<div class="banner">
+				<h1>Anthony Pekearo</h1>
 <!-- Header Link Directory -->
-			<div class="linkDirectory">
-				<a href="index.html">About </a>
-				<a href="portfolio.html">Portfolio </a>
-				<a href="contact.html">Contact </a>
-			</div>
+<!--Bootstrap has setting prepared for <nav> content-->
+		<nav>
+			<ul class="nav nav-tabs">
+				<li role="presentation"><a href="index.html">About </a></li>
+				<li role="presentation"><a href="portfolio.html">Portfolio </a></li>
+				<li role="presentation"><a href="contact.html">Contact </a></li>
+			</ul>
+		</nav>
 		</div>
 	</header>
 </div>
 
-	<div class="content">
+<!--bringing in my row and col measurements to work with the Bootstrap system-->
+<div class="content">
+	<div class="row">
+	<div class="col-md-7">
 		<section class="container">
 			<h2>Contact Me!</h2>
 			<label for ="name">Name</label>
@@ -34,7 +40,10 @@
 		<textarea name="message" id="message" placeholder="Shoot Me A Message And I'll Try To Reply Quickly! Thank You!" style="height:200px"></textarea>
 		<input type="submit" value="Submit">
 			</section>
+		</div>
+		<!--close the col div and open another in the same row-->
 		<!--after the contact form, there still needs to be the Icon Box properly placed on the screen using css-->
+		<div class="col-md-5">
 		<section class="connect">
 		<h3>Connect With Me Easily!</h3>
 		<br>
@@ -43,6 +52,8 @@
 		<a href="https://www.linkedin.com/in/apekearo" target="_blank"><img src="assets/images/linkedinPic.png" class="icons" alt="Linkedin_Logo" title="Connect With Me On Linkedin!"></a>
 		<a href="http://stackoverflow.com/users/7655302/datavader" target="_blank"><img src="assets/images/stackoverflowPic.png" class="icons" alt="Stackoverflow_Logo" title="See All My Stackoverflow Contributions!"></a>
 	</section>
+	</div>
+	</div>
 	</div>
 	<footer>
 	&copy; Created and Copyright by Anthony Pekearo 2017

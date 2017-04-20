@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 	<title>Basic Porfolio Showcase</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div id="main-menu">
@@ -13,11 +13,13 @@
 		<div class="banner">
 			<h1>Anthony Pekearo</h1>
 	<!-- Nesting the linkDirectory inside the Banner div for placemetn control, might make them relatively positioned.  seperating the divs for my banner and links, but might not keep it this way-->
-			<div class="linkDirectory">
-				<a href="index.html">About</a>
-				<a href="portfolio.html">Portfolio</a>
-				<a href="contact.html">Contact </a>
-				</div>
+		<nav>	
+			<ul class="nav nav-tabs">
+				<li role="presentation"><a href="index.html">About</a></li>
+				<li role="presentation"><a href="portfolio.html">Portfolio</a></li>
+				<li role="presentation"><a href="contact.html">Contact </a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
 </div>
