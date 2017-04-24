@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hangman-Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/boxstyle.css">
+</head>
+<body>
+<header style="width: 500px; height: 100px;margin-bottom: 0px;">
+<h2 style="color:teal">Welcome! Try to guess the name of a flower!</h2>
+</header>
+<p id="gameForm"></p>
+<form name="rateForm">
+<input name="rateCharacter" type="text" size="5" maxlength="1">
+<input name="ratebutton" type="button" style="background:rgb(0,255,106)" value="Guess" onClick="testMark()">
+
+<p id="generateLetter">Wrong Letters:</p>
+<input name="refresh" type="button" style="background-color: magenta" value="New Game" onClick="location.reload()">
+</form>
+<div class="upper">
+  <div class="container">
+    <div class="plant-1" style="height:35%">
+      <div class="stem"></div>
+      <div class="pot"></div>
+    </div>
+    <div class="plant-2" style="height: 85%">
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="stem"></div>
+      <div class="pot"></div>
+    </div>
+    <div class="plant-3" style="height: 68%">
+      <div class="flower"></div>
+      <div class="stem"></div>
+      <div class="pot"></div>
+    </div>
+  </div>
+</div>
+<div class="lower"></div>
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
