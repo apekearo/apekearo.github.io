@@ -62,12 +62,12 @@ var testMark = function(){
         }
     }
     if(finished){
-        window.alert("You win!");
+        window.alert("The Flower Has Bloomed! Great Guessing!");
     }
     
     //once you got six wrong letters, you lose
     if(error === 6){
-        window.alert("Uh...I guess you're dead now.");
+        window.alert("Oh No! I guess the flower didn't grow! Try Again!");
     }
 }
 
