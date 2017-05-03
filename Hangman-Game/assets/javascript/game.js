@@ -8,7 +8,8 @@ var words=[
   ["D","A","H","L","I","A"]
 ]
 var random = Math.floor((Math.random()*(words.length))); 
-
+var winTimes = 0
+var looseTimes = 0
 var answer = words[random]; // the word to guess will be chosen from the array above
 var currentPhrase = new Array(answer.length);
 var error = 0;
@@ -87,11 +88,17 @@ var testMark = function(){
     }
     if(finished){
         window.alert("The Flower Has Bloomed! Great Guessing!");
+        winTimes++;
+        document.getElementById("score").innerHTML = winTimes;
+        console.log(winTimes);
     }
     
     //once you got six wrong letters, you lose
     if(error === 6){
         window.alert("Oh No! I guess the flower didn't grow! Try Again!");
+        looseTimes++;
+        document.getElementById("losses").innerHTML = looseTimes;
+        console.log(looseTimes);
     }
 }
 function mySubmitFunction(evt) {

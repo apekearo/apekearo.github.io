@@ -15,8 +15,12 @@
 <input name="rateCharacter" type="text" size="5" maxlength="1">
 <input name="ratebutton" type="button" style="background:rgb(0,255,106); font-size: large; border:3pt ridge lightgrey" value="Guess" onClick="testMark()">
 
-<p id="generateLetter">Wrong Letters:</p>
-<p id="score"></p>
+<p style="color:darkgrey;" id="generateLetter">Wrong Letters:</p>
+<h4 style="color:violet;"> Totalwins: 
+<label id="score">0</label></h4>
+<h4 style="color:purple;"> TotalLoses:
+<label id="losses">0</label></h4>
+<br>
 <input id="newGameBtn" name="refresh" type="button" style="background-color: magenta; font-size: :large; border:3pt ridge lightgrey" value="New Game" onClick="refreshTheGame()">
 </form>
 <div class="upper">
