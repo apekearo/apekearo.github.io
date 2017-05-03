@@ -5,7 +5,9 @@ var words=[
   ["P","E","O","N","Y"],
   ["I","R","I","S"],
   ["Z","I","N","N","I","A"],
-  ["D","A","H","L","I","A"]
+  ["D","A","H","L","I","A"],
+  ["D","A","I","S","Y"],
+  ["O","R","C","H","I","D"]
 ]
 var random = Math.floor((Math.random()*(words.length))); 
 var winTimes = 0
@@ -76,7 +78,10 @@ var testMark = function(){
         var letter = document.createTextNode(" " + character);
         generateLetter.appendChild(letter); 
         error++;
-        var hangman = document.getElementById("hangman");
+        var remaining=document.getElementById("remaining");
+        var tries = document.createTextNode(" " + error);
+        remaining.appendChild(tries);
+        console.log(error);
     }
     
     //checks if all letters have been found
