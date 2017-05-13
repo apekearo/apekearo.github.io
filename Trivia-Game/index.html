@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/fireworks.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/fireworks.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/game.js"></script>
+
+</head>
+<body>
+	<h1 id="title">Welcome to the Trivia Game</h1>
+	<h3 id="timer">Time Remaining: <span id="time">30</span></h3>
+	<button id="button">  Start  </button>
+	<div class="questions hidden">
+		<h2>Did Spiderman get bit by a radioactive spider?</h2>	
+			<div style="float:right padding-border-margin" id="giphy"></div>
+
+		<form>
+			<input type="radio" name="firstquestion" value="true"> true<br>
+			<input type="radio" name="firstquestion" value="false"> false<br>
+
+			<h2>In which comic did Wolverine first appear in?</h2>
+
+			<input type="radio" name="secondquestion" value="Xmen"> Xmen<br>
+			<input type="radio" name="secondquestion" value="Incredible Hulk"> Incredible Hulk<br>
+			<input type="radio" name="secondquestion" value="Fantastic Four"> Fantastic Four<br>
+		
+
+			<h2>Who is technically the strongest as a result of comic book battles?</h2>
+
+			<input type="radio" name="thirdquestion" value="Wolverine"> Wolverine<br>
+			<input type="radio" name="thirdquestion" value="Thor"> Thor<br>
+			<input type="radio" name="thirdquestion" value="Hulk"> Hulk<br>
+			<input type="radio" name="thirdquestion" value="Superman"> Superman<br>
+		</form>
+		<br>
+		<input onclick="gradeTest()" name="submit" type="button" value="Grade This Test" >
+		<div id="wrapper">
+			<div id="jsi-fireworks-container" class="container"></div>
+		</div>
+	</div>
+</body>
+</html>
