@@ -11,9 +11,9 @@
 //the game reveals final answers correct,false, and unanswered
 // $(document).ready(function(){
 // $("#button").click(function () {
-// 	console.log('click');
-// 	setTimeout($(".questions").removeClass("hidden"), 30000);
-	
+//  console.log('click');
+//  setTimeout($(".questions").removeClass("hidden"), 30000);
+    
 // });});
 var intervalId;
 var shouldRestart = false;
@@ -22,16 +22,16 @@ $(document).ready(function() {
     var time;
     $("#button").on("click", timerRun);
     $("#restart").on('click', function() {
-    	shouldRestart = true;
-    	timerRun();
+        shouldRestart = true;
+        timerRun();
     })
     //how to make sure the button on responds to being clicked once
     function timerRun() {
-    	if(intervalId && !shouldRestart){
-        	return 
-        	//this return allows things not to continue down the funciton unless these two varibles are both true.
-        	//and the !shouldRestart is true here because of the !  infront which makes things oposite
-       	}
+        if(intervalId && !shouldRestart){
+            return 
+            //this return allows things not to continue down the funciton unless these two varibles are both true.
+            //and the !shouldRestart is true here because of the !  infront which makes things oposite
+        }
         time = 30;
         intervalId = setInterval(countdown, 1000)
         $(".questions").removeClass("hidden");
@@ -47,7 +47,7 @@ $(document).ready(function() {
         time--;
         $("#time").html(time);
         if (time === 0) {
-            $("#time").append("<div> Time's Up!");
+            $("#time").append("<div> Time's Up! <br> Click Reload To Try Again! </div>");
             $(".questions").addClass("hidden");
             clearInterval(intervalId);
         };
@@ -57,13 +57,13 @@ $(document).ready(function() {
     });
 
 // function thirtySeconds(){
-// 	for (var i = 30; i >= 0; i--) {
-// 		setTimeout(oneSecond(i), 1000);
+//  for (var i = 30; i >= 0; i--) {
+//      setTimeout(oneSecond(i), 1000);
 
-// 	}
-// 	function oneSecond(i){
-// 		$("#time").innerHtml(i);
-// 	};
+//  }
+//  function oneSecond(i){
+//      $("#time").innerHtml(i);
+//  };
 // }});
 
 function gradeTest() {
@@ -125,10 +125,10 @@ function gradeTest() {
     //check selected index of pull-down box for correct answer
     //indexes ALWAYS start at 0!
     if (correctAnswers == totalQuestions) {
-        alertText = "Congratulations! You got all the questions right!";
+        alertText = "Congratulations! You got all the questions right!\n Click Reload To Play Again!";
         clearInterval(intervalId);
     } else {
-        alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct!";
+        alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct!" + "\nClick Reload To Try Again!";
                 clearInterval(intervalId);
 
     }
