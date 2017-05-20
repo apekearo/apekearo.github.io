@@ -1,0 +1,73 @@
+<!-- form for the new users to have info connect to the employee profile page.
+
+	-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Employer Form</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
+		<script type="text/javascript" src="ejs.js"></script>
+
+</head>
+<body>
+
+
+  <div class="container">
+
+    <br>
+	<p><a href="index.html">Home</a></p>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1 class="text-center">Texas Farm Hand</h1>
+    </div>
+    <div class="row">
+
+      <!-- Sign-Up Panel-->
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">New Employer Sign-Up</h3>
+          </div>
+          <div class="panel-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form role="form">
+              <div class="form-group">
+                <label for="name-input">First Name:</label>
+                <input class="form-control" id="firstName-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="name-input">Last Name:</label>
+                <input class="form-control" id="lastName-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="email-input">Email:</label>
+                <input class="form-control" id="email-input" type="email">
+              </div>
+			  <div class="form-group">
+                <label for="password-input">Password:</label>
+                <input class="form-control" id="password-input" type="password">
+              </div>
+              <div class="form-group">
+                <label for="phone-input">Phone Number:</label>
+                <input class="form-control" id="phone-input" type="number">
+              </div>
+              <div class="form-group">
+                <label for="skills-input">What types of jobs do you normally offer (painting, construction, general labor, etc)</label>
+                <textarea class="form-control" id="work-offered-input" rows="5"></textarea>
+              </div>
+              <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="farmHand2.js"></script>
+</body>
+</html>
