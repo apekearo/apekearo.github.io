@@ -29,7 +29,21 @@
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
+      var config = {
+    apiKey: "AIzaSyCbY-BQ0s-i-9iZKcfJHjnPXCRsDooHzcE",
+    authDomain: "kopperlfarmhand-1492557353717.firebaseapp.com",
+    databaseURL: "https://kopperlfarmhand-1492557353717.firebaseio.com",
+    projectId: "kopperlfarmhand-1492557353717",
+    storageBucket: "kopperlfarmhand-1492557353717.appspot.com",
+    messagingSenderId: "954578208640"
+  };
+firebase.initializeApp(config);
+var database = firebase.database();
       var map, infoWindow;
+      var workerLocations = [{lat: 103.33, lng: -34.3}, {lat: 104.5, lng: -33}];
+            var employerLocations = [{lat: 103.33, lng: -34.3}, {lat: 104.5, lng: -33}]
+
+
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
