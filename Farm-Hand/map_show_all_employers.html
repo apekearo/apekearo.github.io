@@ -12,11 +12,8 @@
 
 <body>
     <p><a href="index.html">Home</a></p>
-    <h3>Hire a Farmhand!</h3>
-    <a href="http://stackoverflow.com/questions/16985867/adding-an-onclick-event-to-google-map-marker" target="_blank">Read this to learn how to make dots clickable.</a>
-    <p>So once they signup (or login) they get sent to this page. Here is where you grab their current location and save it on their user profile to use later.</p>
-    <p>On this page, have a basic search feature where employers can filter by distance (within 5 miles), ratings (4 stars or better), and hourly rate (no more than 15$/hour) and so on</p>
-    <p>When they search, it refreshes the map with those new results</p>
+    <h3>Get a job!</h3>
+    <p>Same thing, but for workers to find employers</p>
     <div id="map"></div>
     <script>
 
@@ -24,20 +21,20 @@
 
         // these will be loaded of all worker profiles in your firebase
         var worker_locations = [{
-                lat: 30.30,
+                lat: 30.20,
                 lng: -97.643
             },
             {
-                lat: 30.20,
+                lat: 30.40,
                 lng: -97.85
             },
             {
-                lat: 30.25,
+                lat: 30.35,
                 lng: -97.55
             },
             {
-                lat: 30.15,
-                lng: -98.1
+                lat: 30.35,
+                lng: -97.55
             },
         ]
 

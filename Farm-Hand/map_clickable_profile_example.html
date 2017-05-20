@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <p><a href="index.html">Home</a></p>
+    <h3>Hire a Farmhand!</h3>
+    <p>On this page, have a basic search feature where employers can filter by distance (within 5 miles), ratings (4 stars or better), and hourly rate (no more than 15$/hour) and so on</p>
+    <p>When they search, it refreshes the map with those new results</p>
+    <div id="map"></div>
+    <script>
+        var myCenter=new google.maps.LatLng(53, -1.33);
+
+        var marker=new google.maps.Marker({
+            position:myCenter,
+            url: 'https://google.com',
+            animation:google.maps.Animation.DROP
+        });
+
+        function initialize()
+        {
+        var mapProp = {
+            center:myCenter,
+            zoom: 14,
+            draggable: false,
+            scrollwheel: false,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+        var map=new google.maps.Map(document.getElementById("map-canvas"),mapProp);
+
+        marker.setMap(map);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addListener(marker, 'click', function() {window.location.href = marker.url;});
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC2bn09ZM8jNrPx2UDsb96a0ql3BTssvs&callback=initialize">
+    </script>
+</body>
+
+</html>
