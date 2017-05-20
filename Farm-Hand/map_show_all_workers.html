@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <p><a href="index.html">Home</a></p>
+    <h3>Hire a Farmhand!</h3>
+    <a href="http://stackoverflow.com/questions/16985867/adding-an-onclick-event-to-google-map-marker" target="_blank">Read this to learn how to make dots clickable.</a>
+    <p>So once they signup (or login) they get sent to this page. Here is where you grab their current location and save it on their user profile to use later.</p>
+    <p>On this page, have a basic search feature where employers can filter by distance (within 5 miles), ratings (4 stars or better), and hourly rate (no more than 15$/hour) and so on</p>
+    <p>When they search, it refreshes the map with those new results</p>
+    <div id="map"></div>
+    <script>
+
+        var markers;
+
+        // these will be loaded of all worker profiles in your firebase
+        var worker_locations = [{
+                lat: 30.30,
+                lng: -97.643
+            },
+            {
+                lat: 30.20,
+                lng: -97.85
+            },
+            {
+                lat: 30.25,
+                lng: -97.55
+            },
+            {
+                lat: 30.15,
+                lng: -98.1
+            },
+        ]
+
+
+        function initMap(locations) {
+
+            function addMarker(marker_location, map_object) {
+                var marker = new google.maps.Marker({
+                    position: marker_location,
+                    map: map_object,
+                    url: 'profile_worker.html'
+                });
+                return marker
+            }
+
+            var center_of_austin = {
+                lat: 30.30,
+                lng: -97.743
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: center_of_austin
+            });
+
+            markers = worker_locations.map(function(location) {
+                return addMarker(location, map)
+            });
+
+            console.log(markers);
+            google.maps.event.addDomListener(window, 'load', initMap);
+            markers.map(function(marker) {
+                google.maps.event.addListener(
+                    marker,
+                    'click',
+                    function() {
+                        window.location.href = marker.url;
+                    }
+                );
+            })
+        }
+
+
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC2bn09ZM8jNrPx2UDsb96a0ql3BTssvs&callback=initMap">
+    </script>
+</body>
+
+</html>
