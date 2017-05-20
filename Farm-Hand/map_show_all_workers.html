@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <style>
-       #map {
-        height: 400px;
-        width: 100%;
-       }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <p><a href="index.html">Home</a></p>
     <h3>Hire a Farmhand!</h3>
+    <p>On this page, have a basic search feature where employers can filter by distance (within 5 miles), ratings (4 stars or better), and hourly rate (no more than 15$/hour) and so on</p>
+    <p>When they search, it refreshes the map with those new results</p>
     <div id="map"></div>
     <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+        // these will be loaded of all worker profiles in your firebase
+        var worker_locations = [{
+                lat: 30.30,
+                lng: -97.643
+            },
+            {
+                lat: 30.20,
+                lng: -97.85
+            },
+            {
+                lat: 30.25,
+                lng: -97.55
+            },
+            {
+                lat: 30.15,
+                lng: -98.1
+            },
+        ]
+
+
+        function initMap(locations) {
+
+            function addMarker(marker_location, map_object) {
+                var marker = new google.maps.Marker({
+                    position: marker_location,
+                    map: map_object,
+                    url: 'profile_worker.html'
+                });
+            }
+
+            var center_of_austin = {
+                lat: 30.30,
+                lng: -97.743
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: center_of_austin
+            });
+
+            worker_locations.map(function(location) {
+                addMarker(location, map)
+            });
+        }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC2bn09ZM8jNrPx2UDsb96a0ql3BTssvs&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC2bn09ZM8jNrPx2UDsb96a0ql3BTssvs&callback=initMap">
     </script>
-  </body>
+</body>
+
 </html>
