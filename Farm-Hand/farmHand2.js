@@ -11,6 +11,13 @@ var config = {
   var database = firebase.database();
   var connectionsRef = database.ref("/connections");
   var connectedRef = database.ref(".info/connected");
+  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+  'size': 'invisible',
+  'callback': function(response) {
+    // reCAPTCHA solved, allow signInWithPhoneNumber.
+    onSignInSubmit();
+  }
+});
 
 connectedRef.on("value", function(snap) {
 
